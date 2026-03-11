@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRAMEHAUS — Design Your Perfect Wall Frame</title>
+  <meta name="description" content="Luxury custom wall frames crafted to perfection. Design your own frame online and preview it in your space." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- LOADER -->
+
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">FRAMEHAUS</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+<!-- NAV -->
+
+<nav class="nav" id="nav">
+  <div class="nav-logo">FRAMEHAUS</div>
+  <div class="nav-links">
+    <a href="#collections">Collections</a>
+    <a href="#customizer">Customize</a>
+    <a href="#rooms">Room Preview</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <button class="cart-btn" id="cartBtn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <button class="nav-cta" onclick="scrollToCustomizer()">Start Designing</button>
+  </div>
+  <button class="nav-hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#collections" onclick="closeMobile()">Collections</a>
+  <a href="#customizer" onclick="closeMobile()">Customize</a>
+  <a href="#rooms" onclick="closeMobile()">Room Preview</a>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- HERO -->
+
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-room">
+      <!-- Decorative wall art mockup -->
+      <div class="wall-display">
+        <div class="wall-frame-hero f1">
+          <div class="frame-mat">
+            <div class="frame-img" style="background: linear-gradient(135deg, #c9a96e 0%, #8b6914 50%, #c9a96e 100%); display:flex; align-items:center; justify-content:center; color:#fff3; font-size:2rem;">🌿</div>
+          </div>
+        </div>
+        <div class="wall-frame-hero f2">
+          <div class="frame-mat dark">
+            <div class="frame-img" style="background: linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); display:flex; align-items:center; justify-content:center; color:#fff3; font-size:2rem;">✦</div>
+          </div>
+        </div>
+        <div class="wall-frame-hero f3">
+          <div class="frame-mat">
+            <div class="frame-img" style="background: linear-gradient(45deg, #f5e6d3 0%, #e8c9a0 100%); display:flex; align-items:center; justify-content:center; color:#c9a96e88; font-size:1.5rem;">◯</div>
+          </div>
+        </div>
+      </div>
+      <div class="wall-shelf"></div>
+      <div class="wall-plant">🌿</div>
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal">Est. 2024 · Handcrafted Luxury</div>
+    <h1 class="hero-title reveal-delay-1">
+      Design Your<br/><em>Perfect</em><br/>Wall Frame
+    </h1>
+    <p class="hero-sub reveal-delay-2">Museum-quality frames, crafted to your vision.<br/>Every wall tells a story.</p>
+    <div class="hero-actions reveal-delay-3">
+      <button class="btn-primary" onclick="scrollToCustomizer()">Start Designing</button>
+      <button class="btn-ghost" onclick="document.getElementById('collections').scrollIntoView({behavior:'smooth'})">View Collections</button>
+    </div>
+    <div class="hero-stats reveal-delay-4">
+      <div class="stat"><span class="stat-n">12K+</span><span class="stat-l">Frames Crafted</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-n">98%</span><span class="stat-l">Happy Clients</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-n">4.9★</span><span class="stat-l">Average Rating</span></div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>Custom Wood Frames</span><span class="dot">·</span>
+    <span>Museum Glass</span><span class="dot">·</span>
+    <span>Metal Frames</span><span class="dot">·</span>
+    <span>Archival Matting</span><span class="dot">·</span>
+    <span>Handcrafted Quality</span><span class="dot">·</span>
+    <span>Custom Wood Frames</span><span class="dot">·</span>
+    <span>Museum Glass</span><span class="dot">·</span>
+    <span>Metal Frames</span><span class="dot">·</span>
+    <span>Archival Matting</span><span class="dot">·</span>
+    <span>Handcrafted Quality</span><span class="dot">·</span>
+  </div>
+</div>
+
+<!-- COLLECTIONS -->
+
+<section class="collections" id="collections">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow reveal">Our Collections</div>
+      <h2 class="section-title reveal-delay-1">Frames That <em>Elevate</em><br/>Every Space</h2>
+    </div>
+    <div class="products-grid">
+
+```
+  <div class="product-card reveal" data-price="89" data-name="Nordic Oak — 8×10" data-material="Wood" data-color="Natural Oak">
+    <div class="product-img-wrap">
+      <div class="product-img" style="background: linear-gradient(135deg, #f5f0e8 30%, #e8dcc8 100%);">
+        <div class="frame-preview wood-light">
+          <div class="fp-mat"><div class="fp-inner" style="background:linear-gradient(135deg,#d4c5b0,#b8a898)"></div></div>
+        </div>
+      </div>
+      <div class="product-overlay">
+        <button class="quick-add" onclick="addToCart(this, 'Nordic Oak — 8×10', 89, 'Natural Wood', 'Walnut Brown')">Add to Cart</button>
+        <button class="quick-customize" onclick="scrollToCustomizer()">Customize</button>
+      </div>
+      <div class="product-badge">Bestseller</div>
+    </div>
+    <div class="product-info">
+      <div class="product-colors">
+        <span class="pc" style="background:#c9a96e" title="Oak"></span>
+        <span class="pc" style="background:#5c4033" title="Walnut"></span>
+        <span class="pc" style="background:#f5f0e8" title="White"></span>
+        <span class="pc" style="background:#1a1a1a" title="Black"></span>
+      </div>
+      <h3 class="product-name">Nordic Oak</h3>
+      <p class="product-desc">Solid oak, hand-sanded, with museum-grade UV glass</p>
+      <div class="product-footer">
+        <span class="product-price">From $89</span>
+        <div class="product-rating">★★★★★ <span>4.9</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card reveal" data-price="129" data-name="Matte Noir — 11×14" data-material="Metal" data-color="Matte Black">
+    <div class="product-img-wrap">
+      <div class="product-img" style="background: linear-gradient(135deg, #1a1a1a 30%, #2d2d2d 100%);">
+        <div class="frame-preview metal-black">
+          <div class="fp-mat dark"><div class="fp-inner" style="background:linear-gradient(135deg,#111,#222)"></div></div>
+        </div>
+      </div>
+      <div class="product-overlay">
+        <button class="quick-add" onclick="addToCart(this, 'Matte Noir — 11×14', 129, 'Metal', 'Matte Black')">Add to Cart</button>
+        <button class="quick-customize" onclick="scrollToCustomizer()">Customize</button>
+      </div>
+      <div class="product-badge new">New</div>
+    </div>
+    <div class="product-info">
+      <div class="product-colors">
+        <span class="pc" style="background:#1a1a1a" title="Black"></span>
+        <span class="pc" style="background:#c0c0c0" title="Silver"></span>
+        <span class="pc" style="background:#c9a96e" title="Gold"></span>
+      </div>
+      <h3 class="product-name">Matte Noir</h3>
+      <p class="product-desc">Precision-cut aluminum with anti-glare glass finish</p>
+      <div class="product-footer">
+        <span class="product-price">From $129</span>
+        <div class="product-rating">★★★★★ <span>5.0</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card reveal" data-price="149" data-name="Vintage Walnut — 16×20" data-material="Wood" data-color="Dark Walnut">
+    <div class="product-img-wrap">
+      <div class="product-img" style="background: linear-gradient(135deg, #3d2b1f 30%, #5c3d2e 100%);">
+        <div class="frame-preview wood-dark">
+          <div class="fp-mat"><div class="fp-inner" style="background:linear-gradient(135deg,#c8b8a8,#a89888)"></div></div>
+        </div>
+      </div>
+      <div class="product-overlay">
+        <button class="quick-add" onclick="addToCart(this, 'Vintage Walnut — 16×20', 149, 'Wood', 'Dark Walnut')">Add to Cart</button>
+        <button class="quick-customize" onclick="scrollToCustomizer()">Customize</button>
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="product-colors">
+        <span class="pc" style="background:#3d2b1f" title="Walnut"></span>
+        <span class="pc" style="background:#8b6914" title="Honey"></span>
+        <span class="pc" style="background:#5c4033" title="Mahogany"></span>
+      </div>
+      <h3 class="product-name">Vintage Walnut</h3>
+      <p class="product-desc">Rich walnut grain, handcrafted corners, archival matting</p>
+      <div class="product-footer">
+        <span class="product-price">From $149</span>
+        <div class="product-rating">★★★★☆ <span>4.8</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card reveal" data-price="199" data-name="Gallery Float — 20×24" data-material="Modern" data-color="Brushed Gold">
+    <div class="product-img-wrap">
+      <div class="product-img" style="background: linear-gradient(135deg, #f5f0e8 30%, #ede0c4 100%);">
+        <div class="frame-preview modern-gold">
+          <div class="fp-mat light"><div class="fp-inner" style="background:linear-gradient(135deg,#e8d5b0,#d4c090)"></div></div>
+        </div>
+      </div>
+      <div class="product-overlay">
+        <button class="quick-add" onclick="addToCart(this, 'Gallery Float — 20×24', 199, 'Modern', 'Brushed Gold')">Add to Cart</button>
+        <button class="quick-customize" onclick="scrollToCustomizer()">Customize</button>
+      </div>
+      <div class="product-badge" style="background:#c9a96e; color:#fff;">Premium</div>
+    </div>
+    <div class="product-info">
+      <div class="product-colors">
+        <span class="pc" style="background:#c9a96e" title="Gold"></span>
+        <span class="pc" style="background:#c0c0c0" title="Silver"></span>
+        <span class="pc" style="background:#b87333" title="Copper"></span>
+      </div>
+      <h3 class="product-name">Gallery Float</h3>
+      <p class="product-desc">Floating mount design with brushed metal finish</p>
+      <div class="product-footer">
+        <span class="product-price">From $199</span>
+        <div class="product-rating">★★★★★ <span>4.9</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- BRAND STORY -->
+
+<section class="story" id="about">
+  <div class="story-grid">
+    <div class="story-visual">
+      <div class="story-frame-stack">
+        <div class="sf sf1"></div>
+        <div class="sf sf2"></div>
+        <div class="sf sf3">
+          <div class="sf-inner" style="background:linear-gradient(135deg,#c9a96e33,#8b691433); display:flex; align-items:center; justify-content:center; font-size:4rem;">🖼</div>
+        </div>
+      </div>
+      <div class="story-accent">Est. 2024</div>
+    </div>
+    <div class="story-content">
+      <div class="section-eyebrow reveal">Our Philosophy</div>
+      <h2 class="section-title reveal-delay-1">Art Deserves a<br/><em>Perfect Home</em></h2>
+      <p class="story-body reveal-delay-2">We believe the frame is not an afterthought — it is the final brushstroke. Every FRAMEHAUS piece is crafted by master artisans who treat your art with the reverence it deserves.</p>
+      <p class="story-body reveal-delay-3">From the initial cut to the final polish, our frames are built to last generations. We use only sustainably sourced woods, precision-milled metals, and museum-grade glass.</p>
+      <div class="story-features reveal-delay-4">
+        <div class="sf-feat"><span>✦</span> Sustainably Sourced Materials</div>
+        <div class="sf-feat"><span>✦</span> Museum-Grade UV Glass</div>
+        <div class="sf-feat"><span>✦</span> Archival Acid-Free Matting</div>
+        <div class="sf-feat"><span>✦</span> Worldwide Shipping</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRAME CUSTOMIZER -->
+
+<section class="customizer-section" id="customizer">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow reveal">Frame Studio</div>
+      <h2 class="section-title reveal-delay-1">Design Your<br/><em>Custom Frame</em></h2>
+      <p class="section-sub reveal-delay-2">Upload your image and craft the perfect frame in real time</p>
+    </div>
+    <div class="customizer-wrap">
+      <div class="customizer-controls">
+        <!-- Upload -->
+        <div class="ctrl-group">
+          <label class="ctrl-label">1. Upload Your Image</label>
+          <div class="upload-zone" id="uploadZone" onclick="document.getElementById('imgInput').click()">
+            <div class="upload-icon">📷</div>
+            <div class="upload-text">Click or drag image here</div>
+            <div class="upload-sub">PNG, JPG up to 20MB</div>
+            <input type="file" id="imgInput" accept="image/*" style="display:none" onchange="handleUpload(event)" />
+          </div>
+        </div>
+        <!-- Size -->
+        <div class="ctrl-group">
+          <label class="ctrl-label">2. Frame Size</label>
+          <div class="option-pills" id="sizeOptions">
+            <button class="pill active" onclick="selectOption('size', '5×7', this)">5×7"</button>
+            <button class="pill" onclick="selectOption('size', '8×10', this)">8×10"</button>
+            <button class="pill" onclick="selectOption('size', '11×14', this)">11×14"</button>
+            <button class="pill" onclick="selectOption('size', '16×20', this)">16×20"</button>
+            <button class="pill" onclick="selectOption('size', '20×24', this)">20×24"</button>
+          </div>
+        </div>
+        <!-- Material -->
+        <div class="ctrl-group">
+          <label class="ctrl-label">3. Frame Material</label>
+          <div class="material-options">
+            <div class="mat-opt active" onclick="selectMaterial('wood', this)">
+              <div class="mat-swatch" style="background: linear-gradient(135deg, #c9a96e, #8b6914)"></div>
+              <span>Wood</span>
+            </div>
+            <div class="mat-opt" onclick="selectMaterial('metal', this)">
+              <div class="mat-swatch" style="background: linear-gradient(135deg, #808080, #404040)"></div>
+              <span>Metal</span>
+            </div>
+            <div class="mat-opt" onclick="selectMaterial('modern', this)">
+              <div class="mat-swatch" style="background: linear-gradient(135deg, #f0f0f0, #d0d0d0)"></div>
+              <span>Modern</span>
+            </div>
+          </div>
+        </div>
+        <!-- Color -->
+        <div class="ctrl-group">
+          <label class="ctrl-label">4. Frame Color</label>
+          <div class="color-grid" id="colorGrid">
+            <!-- populated by JS -->
+          </div>
+        </div>
+        <!-- Mat -->
+        <div class="ctrl-group">
+          <label class="ctrl-label">5. Mat Color</label>
+          <div class="mat-colors">
+            <button class="mc active" style="background:#fff; border:2px solid #c9a96e" title="White" onclick="selectMatColor('#fff', this)"></button>
+            <button class="mc" style="background:#f5f0e8" title="Cream" onclick="selectMatColor('#f5f0e8', this)"></button>
+            <button class="mc" style="background:#e8e0d0" title="Linen" onclick="selectMatColor('#e8e0d0', this)"></button>
+            <button class="mc" style="background:#1a1a1a" title="Black" onclick="selectMatColor('#1a1a1a', this)"></button>
+            <button class="mc" style="background:#2d4a3e" title="Forest" onclick="selectMatColor('#2d4a3e', this)"></button>
+          </div>
+        </div>
+        <!-- Orientation -->
+        <div class="ctrl-group">
+          <label class="ctrl-label">6. Orientation</label>
+          <div class="option-pills">
+            <button class="pill active" onclick="selectOrientation('portrait', this)">Portrait</button>
+            <button class="pill" onclick="selectOrientation('landscape', this)">Landscape</button>
+            <button class="pill" onclick="selectOrientation('square', this)">Square</button>
+          </div>
+        </div>
+        <!-- Add to cart -->
+        <div class="ctrl-group">
+          <div class="price-display">
+            <span class="price-label">Estimated Price:</span>
+            <span class="price-val" id="custPrice">$89</span>
+          </div>
+          <button class="btn-primary full" onclick="addCustomToCart()">Add Custom Frame to Cart</button>
+          <button class="btn-ghost full mt8" onclick="downloadPreview()">Download Preview</button>
+        </div>
+      </div>
+
+```
+  <!-- LIVE PREVIEW -->
+  <div class="customizer-preview" id="customizerPreview">
+    <div class="preview-wall" id="previewWall">
+      <div class="preview-frame-wrap" id="previewFrameWrap">
+        <div class="preview-frame" id="previewFrame">
+          <div class="preview-mat" id="previewMat">
+            <div class="preview-img-area" id="previewImgArea">
+              <div class="preview-placeholder" id="previewPlaceholder">
+                <div style="font-size:2.5rem">🖼</div>
+                <div>Your artwork here</div>
+              </div>
+              <img id="previewImg" src="" alt="Preview" style="display:none; width:100%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preview-shadow"></div>
+    </div>
+    <div class="preview-label" id="previewLabel">Nordic Oak · 5×7" · Portrait</div>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ROOM PREVIEW -->
+
+<section class="rooms-section" id="rooms">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow reveal">Room Preview</div>
+      <h2 class="section-title reveal-delay-1">See It In<br/><em>Your Space</em></h2>
+    </div>
+    <div class="room-tabs">
+      <button class="room-tab active" onclick="switchRoom('living', this)">Living Room</button>
+      <button class="room-tab" onclick="switchRoom('bedroom', this)">Bedroom</button>
+      <button class="room-tab" onclick="switchRoom('office', this)">Office</button>
+    </div>
+    <div class="room-display" id="roomDisplay">
+      <!-- Living Room -->
+      <div class="room living active" id="roomLiving">
+        <div class="room-wall">
+          <div class="room-elements living-elements">
+            <div class="room-sofa">🛋</div>
+            <div class="room-plant-big">🌿</div>
+            <div class="room-lamp">💡</div>
+          </div>
+          <div class="room-frame-display" id="roomFrame">
+            <div class="room-frame-inner" id="roomFrameInner">
+              <div class="room-frame-mat" id="roomFrameMat">
+                <div class="room-img-area" id="roomImgArea">
+                  <div id="roomPlaceholder" style="font-size:2rem; color:#c9a96e88">🖼</div>
+                  <img id="roomImg" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover;" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="room-label">Modern Living Room</div>
+      </div>
+      <!-- Bedroom -->
+      <div class="room bedroom" id="roomBedroom">
+        <div class="room-wall bedroom-wall">
+          <div class="room-elements bedroom-elements">
+            <div class="room-bed">🛏</div>
+            <div class="room-bedplant">🌱</div>
+          </div>
+          <div class="room-frame-display">
+            <div class="room-frame-inner">
+              <div class="room-frame-mat">
+                <div class="room-img-area">
+                  <div style="font-size:2rem; color:#c9a96e88">🖼</div>
+                  <img class="room-img-copy" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover;" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="room-label">Cozy Bedroom</div>
+      </div>
+      <!-- Office -->
+      <div class="room office" id="roomOffice">
+        <div class="room-wall office-wall">
+          <div class="room-elements office-elements">
+            <div class="room-desk">🖥</div>
+            <div class="room-books">📚</div>
+          </div>
+          <div class="room-frame-display">
+            <div class="room-frame-inner">
+              <div class="room-frame-mat">
+                <div class="room-img-area">
+                  <div style="font-size:2rem; color:#c9a96e88">🖼</div>
+                  <img class="room-img-copy" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover;" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="room-label">Home Office</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow reveal">Community Gallery</div>
+      <h2 class="section-title reveal-delay-1">Frames In The<br/><em>Wild</em></h2>
+    </div>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item gi-tall" style="background: linear-gradient(135deg, #f5f0e8, #e8dcc8); display:flex;align-items:center;justify-content:center;"><div class="gi-frame"><div style="font-size:3rem">🌅</div></div><div class="gi-overlay"><span>Living Room · Oak</span></div></div>
+    <div class="gallery-item" style="background: linear-gradient(135deg, #1a1a2e, #16213e); display:flex;align-items:center;justify-content:center;"><div class="gi-frame dark"><div style="font-size:2.5rem">🌙</div></div><div class="gi-overlay"><span>Bedroom · Noir</span></div></div>
+    <div class="gallery-item" style="background: linear-gradient(135deg, #d4edda, #c3e6cb); display:flex;align-items:center;justify-content:center;"><div class="gi-frame"><div style="font-size:2.5rem">🌿</div></div><div class="gi-overlay"><span>Office · Walnut</span></div></div>
+    <div class="gallery-item gi-wide" style="background: linear-gradient(135deg, #fdebd0, #f5cba7); display:flex;align-items:center;justify-content:center;"><div class="gi-frame"><div style="font-size:2.5rem">🎨</div></div><div class="gi-overlay"><span>Studio · Gold Float</span></div></div>
+    <div class="gallery-item" style="background: linear-gradient(135deg, #d5d8dc, #aab7c4); display:flex;align-items:center;justify-content:center;"><div class="gi-frame dark"><div style="font-size:2.5rem">🏙</div></div><div class="gi-overlay"><span>Hallway · Silver</span></div></div>
+    <div class="gallery-item gi-tall" style="background: linear-gradient(135deg, #2c3e50, #3498db); display:flex;align-items:center;justify-content:center;"><div class="gi-frame dark"><div style="font-size:3rem">🌊</div></div><div class="gi-overlay"><span>Bathroom · Metal</span></div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow reveal">Client Stories</div>
+      <h2 class="section-title reveal-delay-1">Words From<br/><em>Our Clients</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The quality is absolutely stunning. My wedding photo finally has the frame it deserves. FRAMEHAUS exceeded every expectation."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div><div class="testi-name">Sarah M.</div><div class="testi-loc">New York, USA</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The online customizer is so intuitive. I designed my entire gallery wall in 20 minutes. The frames arrived perfectly packaged."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div><div class="testi-name">Ahmad K.</div><div class="testi-loc">Dubai, UAE</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I've ordered from many frame companies, but FRAMEHAUS is on another level. The walnut finish is perfection. Worth every penny."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">L</div>
+          <div><div class="testi-name">Lisa T.</div><div class="testi-loc">London, UK</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+
+<section class="process-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow reveal">How It Works</div>
+      <h2 class="section-title reveal-delay-1">Simple As<br/><em>Three Steps</em></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-num">01</div>
+        <div class="step-icon">🎨</div>
+        <h3>Design Online</h3>
+        <p>Use our Frame Studio to upload your image, choose materials, size, and color in real time.</p>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step reveal">
+        <div class="step-num">02</div>
+        <div class="step-icon">🔨</div>
+        <h3>We Craft It</h3>
+        <p>Our artisans carefully handcraft your frame using only premium materials and archival techniques.</p>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step reveal">
+        <div class="step-num">03</div>
+        <div class="step-icon">📦</div>
+        <h3>Delivered to You</h3>
+        <p>Your frame arrives securely packaged, ready to hang. Happiness guaranteed or full refund.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-content">
+        <div class="section-eyebrow reveal">Get In Touch</div>
+        <h2 class="section-title reveal-delay-1">Let's Create<br/><em>Something</em><br/>Beautiful</h2>
+        <div class="contact-info">
+          <div class="ci-item"><span>✉</span> hello@framehaus.com</div>
+          <div class="ci-item"><span>📞</span> +1 (800) FRAME-US</div>
+          <div class="ci-item"><span>📍</span> New York · London · Dubai</div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" onsubmit="submitContact(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" name="phone" placeholder="+1 (000) 000-0000" />
+        </div>
+        <div class="form-group">
+          <label>Message *</label>
+          <textarea name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary full">Send Message</button>
+        <div class="form-success" id="formSuccess">✓ Thank you! We'll be in touch within 24 hours.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">FRAMEHAUS</div>
+      <p class="footer-tagline">Crafting moments.<br/>Framing memories.</p>
+    </div>
+    <div class="footer-links-grid">
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="#collections">All Frames</a>
+        <a href="#customizer">Custom Frames</a>
+        <a href="#collections">Gift Cards</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#about">About Us</a>
+        <a href="#">Sustainability</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#contact">Contact</a>
+        <a href="#">Shipping Info</a>
+        <a href="#">Returns</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 FRAMEHAUS. All rights reserved.</span>
+    <div class="footer-social">
+      <a href="#">IG</a><a href="#">FB</a><a href="#">PI</a>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty" id="cartEmpty">
+      <div style="font-size:3rem">🖼</div>
+      <p>Your cart is empty</p>
+      <button class="btn-primary" onclick="scrollToCustomizer();toggleCart()">Start Designing</button>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">$0</span>
+    </div>
+    <button class="btn-primary full" onclick="showCheckout()">Proceed to Checkout</button>
+  </div>
+</div>
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+<!-- CHECKOUT MODAL -->
+
+<div class="modal" id="checkoutModal">
+  <div class="modal-inner">
+    <button class="modal-close" onclick="closeCheckout()">✕</button>
+    <h2 class="modal-title">Checkout</h2>
+    <form id="checkoutForm" onsubmit="submitOrder(event)">
+      <div class="modal-section">
+        <h3 class="modal-section-title">Shipping Information</h3>
+        <div class="form-row">
+          <div class="form-group"><label>First Name *</label><input name="fname" required placeholder="First name"/></div>
+          <div class="form-group"><label>Last Name *</label><input name="lname" required placeholder="Last name"/></div>
+        </div>
+        <div class="form-group"><label>Email *</label><input type="email" name="email" required placeholder="your@email.com"/></div>
+        <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="+1 000 000 0000"/></div>
+        <div class="form-group"><label>Address *</label><input name="address" required placeholder="Street address"/></div>
+        <div class="form-row">
+          <div class="form-group"><label>City *</label><input name="city" required placeholder="City"/></div>
+          <div class="form-group"><label>ZIP *</label><input name="zip" required placeholder="ZIP Code"/></div>
+        </div>
+        <div class="form-group"><label>Country *</label>
+          <select name="country"><option>United States</option><option>United Kingdom</option><option>UAE</option><option>Kuwait</option><option>Saudi Arabia</option><option>Other</option></select>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h3 class="modal-section-title">Payment</h3>
+        <div class="form-group"><label>Card Number *</label><input placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)"/></div>
+        <div class="form-row">
+          <div class="form-group"><label>Expiry *</label><input placeholder="MM/YY" maxlength="5"/></div>
+          <div class="form-group"><label>CVV *</label><input placeholder="123" maxlength="3"/></div>
+        </div>
+      </div>
+      <div class="order-summary-mini" id="orderSummaryMini"></div>
+      <button type="submit" class="btn-primary full">Place Order</button>
+    </form>
+  </div>
+</div>
+<div class="modal-overlay" id="modalOverlay" onclick="closeCheckout()"></div>
+
+<!-- ORDER SUCCESS -->
+
+<div class="success-modal" id="successModal">
+  <div class="success-inner">
+    <div class="success-icon">✓</div>
+    <h2>Order Placed!</h2>
+    <p>Thank you for your order. A confirmation has been sent to your email. Your frames will be crafted with love and shipped within 5–7 business days.</p>
+    <button class="btn-primary" onclick="closeSuccess()">Continue Shopping</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
